@@ -1,0 +1,37 @@
+{
+  "name": "papa-v2",
+  "version": "1.0.0",
+  "description": "Papa Blog",
+  "main": "server.js",
+  "dependencies": {
+    "animejs": "^3.2.0",
+    "axios": "^0.19.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "swiper": "^5.3.8",
+    "vue-fragment": "^1.5.1",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": ".",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panjigemilang/Papa-Blog.git"
+  },
+  "keywords": [
+    "Blogger"
+  ],
+  "author": "Panji Gemilang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panjigemilang/Papa-Blog/issues"
+  },
+  "homepage": "https://github.com/panjigemilang/Papa-Blog#readme"
+}
