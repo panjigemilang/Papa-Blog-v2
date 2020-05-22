@@ -1,0 +1,15 @@
+// => isi dari build()
+New User user {
+  dataValues:
+   { id: null,
+     username: 'kocak',
+     email: 'kocak@gmail.com',
+     password:
+      '$2a$10$8ZLhPZJEAeAgUjTwSdKCJuAz2PBs5NnpRkII/4j8.867JVOacoIBy' },
+  _previousDataValues:
+   { username: undefined, email: undefined, password: undefined },
+  _changed: { username: true, email: true, password: true },
+  _modelOptions:
+  .
+  .
+  .

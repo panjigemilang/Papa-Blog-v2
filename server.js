@@ -1,11 +1,15 @@
 // Required modules
 const express = require("express")
-const mongoose = require("mongoose")
+const mysql = require("mysql")
 const bodyParser = require("body-parser")
 const passport = require("passport")
+const db = require("./config/db")
+const config = require("./config/config.json")
+// const db = require("./models")
 const path = require("path")
 
 const app = express()
+const PORT = process.env.PORT || 5000
 
 // Body Parser
 app.use(
@@ -15,15 +19,24 @@ app.use(
 )
 app.use(bodyParser.json())
 
+// DB Connection
+// db.getModels(config, true)
+//   .sync()
+//   .then(() => {
+//     app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
+//   })
+
+// Indo tutor
+try {
+  db.authenticate()
+  console.log("Connection has been established successfully.")
+} catch (error) {
+  console.error("Unable to connect to the database:", error)
+}
+
 // Routes
-// const user = require("./routes/api/users")
-// const karyawan = require("./routes/api/employees")
-// const profile = require("./routes/api/profile")
-
-// DB Config
-// const db = require("./config/keys").mongoURI
-
-// Connect to Mysql
+const user = require("./routes/api/users")
+const posts = require("./routes/api/posts")
 
 // Passport Middleware
 app.use(passport.initialize())
@@ -32,9 +45,8 @@ app.use(passport.initialize())
 require("./config/passport")(passport)
 
 // use routes
-// app.use("/api/users", user)
-// app.use("/api/employees", karyawan)
-// app.use("/api/profile", profile)
+app.use("/api/users", user)
+app.use("/api/posts", posts)
 
 // Access public folder
 // app.use(
@@ -52,7 +64,3 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
   })
 }
-
-const port = process.env.PORT || 5000
-
-app.listen(port, () => console.log(`Server running on port ${port}`))
