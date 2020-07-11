@@ -15,8 +15,6 @@ const keys = require("../../config/keys")
 const validationRegister = require("../../validation/register")
 const validationLogin = require("../../validation/login")
 
-console.log("User", db.getModels(config))
-
 router.get("/users", (req, res) =>
   res.json({
     message: "users works",
@@ -26,14 +24,14 @@ router.get("/users", (req, res) =>
 // Register New User
 router.post("/register", (req, res) => {
   const { errors, isValid } = validationRegister(req.body)
+  const model = req.body.who === "admin" ? db.admin : db.user
 
   if (!isValid) {
     return res.status(400).json(errors)
   }
 
-  // Check for user email if exists
-  db.getModels(config)
-    .User.findOne({
+  model
+    .findOne({
       where: {
         username: req.body.username,
       },
@@ -44,17 +42,23 @@ router.post("/register", (req, res) => {
         bcrypt.genSalt(10, (err, salt) => {
           bcrypt.hash(req.body.password, salt, (err, hash) => {
             // make new user
-            const newUser = db.getModels(config).User.build({
+            const newUser = model.build({
               username: req.body.username,
               email: req.body.email,
               password: hash,
+              who: req.body.who,
             })
 
             // saving user to DB
             newUser
               .save()
-              .then((user) => res.status(200).json(user.returning))
-              .catch((err) => console.log(err))
+              .then((user) => res.status(200).json(user.dataValues))
+              .catch((err) => {
+                console.log(err)
+                return res
+                  .status(400)
+                  .json({ messages: "error add user", errors: err.toString() })
+              })
           })
         })
       } else {
@@ -72,6 +76,7 @@ router.post("/register", (req, res) => {
 router.post("/login", (req, res) => {
   const username = req.body.username
   const password = req.body.password
+  const model = req.body.who === "admin" ? db.admin : db.user
 
   const { errors, isValid } = validationLogin(req.body)
 
@@ -80,14 +85,14 @@ router.post("/login", (req, res) => {
   }
 
   // find user by username
-  db.getModels(config)
-    .User.findOne({
+  model
+    .findOne({
       where: { username },
     })
     .then((user) => {
       if (!user) {
         return res.status(400).json({
-          username: "user not found",
+          username: "username not found",
         })
       } else {
         bcrypt.compare(password, user.dataValues.password).then((isMatch) => {
@@ -95,8 +100,7 @@ router.post("/login", (req, res) => {
             // create payload
             const payload = {
               id: user.dataValues.id,
-              name: user.dataValues.name,
-              avatar: user.dataValues.avatar,
+              name: user.dataValues.username,
             }
 
             // Sign token
@@ -109,6 +113,7 @@ router.post("/login", (req, res) => {
               (err, token) => {
                 res.json({
                   success: true,
+                  payload,
                   // use Bearer protocol format
                   token: "Bearer " + token,
                 })
@@ -122,6 +127,20 @@ router.post("/login", (req, res) => {
         })
       }
     })
+})
+
+// get User with all the posts
+router.get("/:user", (req, res) => {
+  db.admin
+    .findAll({
+      include: ["admin_post"],
+    })
+    .then((posts) => res.status(200).json(posts))
+    .catch((err) =>
+      res.status(400).json({
+        errors: err,
+      })
+    )
 })
 
 // Passport route

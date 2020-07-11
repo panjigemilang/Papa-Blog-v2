@@ -1,21 +1,115 @@
 const express = require("express")
 const router = express.Router()
+const passport = require("passport")
+const fs = require("fs")
 
 // Model
-const Post = require("../../models/Post")
+const models = require("../../models")
 
-router.get("/", (req, res) => {
-  Post.findAll({
-    limit: 2,
-    raw: true,
-    // offset: req.body.offset,
-    order: [["createdAt", "ASC"]],
-  }).then((posts) => {
-    if (posts) {
-      return res.status(200).json(posts)
-      //   return res.status(200).json("Berhasil")
-    }
-  })
+// Validation
+const validationPost = require("../../validation/post")
+const isEmpty = require("../../validation/is-empty")
+
+// get All Posts
+router.get("/:limit", (req, res) => {
+  models.post
+    .findAll({
+      subQuery: false,
+      order: [["createdAt", "DESC"]],
+      include: ["post_picture", "tags"],
+      limit: req.params.limit,
+      // offset: req.body.offset,
+    })
+    .then((posts) => {
+      if (posts) {
+        return res.status(200).json(posts)
+      } else {
+        return res.status(404).json({
+          messages: "No post found",
+        })
+      }
+    })
 })
+
+// Add Post
+router.post(
+  "/add",
+  // passport.authenticate("jwt", {
+  //   session: false
+  // }),
+  (req, res) => {
+    const { errors, isValid } = validationPost(req.body)
+
+    // set unique ID for images
+    let img_id,
+      images = []
+
+    if (!isValid) {
+      return res.status(400).json(errors)
+    }
+
+    // if there's an image, Insert it to local storage
+    if (!isEmpty(req.body.images)) {
+      req.body.images.map((item, i) => {
+        img_id = new Date().getTime()
+        const filename = `image-${img_id}`
+        const extension = item.match(
+          /png?(?=;base64)|jpg?(?=;base64)|jpeg?(?=;base64)/
+        )[0]
+
+        images.push({ pathname: `/img/${filename}.${extension}` })
+
+        fs.writeFile(
+          `./client/public/img/${filename}.${extension}`,
+          item.match(/,(.*)/)[1],
+          { encoding: "base64" },
+          (err) => {
+            if (err) {
+              console.log("error boss :\n", err)
+            } else {
+              console.log("Image upload success")
+            }
+          }
+        )
+      })
+    }
+
+    models.post
+      .create({
+        title: req.body.title,
+        content: req.body.content,
+      })
+      .then((post) => {
+        // Add images
+        if (!isEmpty(req.body.images)) {
+          images.map((item, i) => (images[i].post_id = post.id))
+
+          models.picture
+            .bulkCreate(images, { returning: true })
+            .then((pict) => console.log("Berhasil insert images to DB"))
+            .catch((err) => console.log("Error insert images to DB", err))
+        }
+
+        // Add Tags
+        if (!isEmpty(req.body.tags)) {
+          models.tag
+            .create({
+              tags: req.body.tags,
+              post_id: post.id,
+            })
+            .then((tag) => console.log(tag.dataValues))
+            .catch((err) => console.log(err))
+        }
+
+        return res.status(200).json(post.dataValues)
+      })
+      .catch((err) => {
+        console.log(err)
+        return res
+          .status(400)
+          .json({ messages: "error add post", errors: err.toString() })
+      })
+  }
+)
 
 module.exports = router

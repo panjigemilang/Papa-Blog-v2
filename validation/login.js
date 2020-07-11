@@ -5,9 +5,7 @@ module.exports = function validateLogininput(data) {
   let errors = {}
   data.username = !isEmpty(data.username) ? data.username : ""
   data.password = !isEmpty(data.password) ? data.password : ""
-  data.passwordConfirm = !isEmpty(data.passwordConfirm)
-    ? data.passwordConfirm
-    : ""
+  data.who = !isEmpty(data.who) ? data.who : ""
 
   if (
     !validator.isLength(data.username, {
@@ -35,12 +33,8 @@ module.exports = function validateLogininput(data) {
     errors.password = "Password field is required"
   }
 
-  if (validator.isEmpty(data.passwordConfirm)) {
-    errors.passwordConfirm = "Confirm password field is required"
-  }
-
-  if (!validator.equals(data.password, data.passwordConfirm)) {
-    errors.password = "Password is not match"
+  if (validator.isEmpty(data.who)) {
+    errors.who = "Login as who field is required"
   }
 
   return {
