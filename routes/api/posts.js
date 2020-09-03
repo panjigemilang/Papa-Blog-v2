@@ -10,19 +10,62 @@ const models = require("../../models")
 const validationPost = require("../../validation/post")
 const isEmpty = require("../../validation/is-empty")
 
-// get All Posts
-router.get("/:limit", (req, res) => {
+// Get all Posts
+router.get("/", (req, res) => {
   models.post
     .findAll({
       subQuery: false,
       order: [["createdAt", "DESC"]],
       include: ["post_picture", "tags"],
-      limit: req.params.limit,
-      // offset: req.body.offset,
     })
     .then((posts) => {
       if (posts) {
         return res.status(200).json(posts)
+      } else {
+        return res.status(404).json({
+          messages: "No post found",
+        })
+      }
+    })
+})
+
+// get Posts by limit and offset
+router.post("/:limit", (req, res) => {
+  const limit = parseInt(req.params.limit)
+  const offset = req.body.offset ? parseInt(req.body.offset) : 0
+
+  models.post
+    .findAll({
+      subQuery: false,
+      order: [["createdAt", "DESC"]],
+      include: ["post_picture", "tags"],
+      limit,
+      offset,
+    })
+    .then((posts) => {
+      if (posts) {
+        return res.status(200).json(posts)
+      } else {
+        return res.status(404).json({
+          messages: "No post found",
+        })
+      }
+    })
+})
+
+// get Post by ID
+router.get("/post/:id", (req, res) => {
+  models.post
+    .findAll({
+      order: [["createdAt", "DESC"]],
+      include: ["post_picture", "tags"],
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then((post) => {
+      if (post) {
+        return res.status(200).json(post)
       } else {
         return res.status(404).json({
           messages: "No post found",

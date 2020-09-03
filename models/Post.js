@@ -42,12 +42,14 @@ module.exports = (sequelize, DataTypes) => {
       as: "post_picture",
       foreignKey: "post_id",
       onDelete: "cascade",
+      hooks: true,
     })
 
     Post.hasMany(models.tag, {
       as: "tags",
       foreignKey: "post_id",
       onDelete: "cascade",
+      hooks: true,
     })
   }
 
