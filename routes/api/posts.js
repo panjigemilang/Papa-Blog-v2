@@ -9,6 +9,7 @@ const models = require("../../models")
 // Validation
 const validationPost = require("../../validation/post")
 const isEmpty = require("../../validation/is-empty")
+const { json } = require("body-parser")
 
 // Get all Posts
 router.get("/", (req, res) => {
