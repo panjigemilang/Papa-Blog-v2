@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1058.267" height="623.92" viewBox="0 0 1058.267 623.92">
+  <g id="Profile_Border_Search_" data-name="Profile Border (Search)" transform="translate(-2550.733 -826)">
+    <g id="Left_Neck_Parent_" data-name="Left Neck (Parent)" transform="translate(2550.733 1068.167)">
+      <path id="Path_72" data-name="Path 72" d="M6947,601.137v96.7H6417.733s455.66,52,265.85-271.2c-21.755-64.005,38.516-89.693,45.658-101.307C6759.783,275.633,6947,601.137,6947,601.137Z" transform="translate(-6417.733 -320.167)" fill="#57c08c"/>
+    </g>
+    <g id="Right_Neck" data-name="Right Neck" transform="translate(3079.733 1069.167)">
+      <path id="Path_72-2" data-name="Path 72" d="M6417.732,601.137v96.7H6947s-455.66,52-265.85-271.2c21.755-64.005-38.516-89.693-45.658-101.307C6604.95,275.633,6417.732,601.137,6417.732,601.137Z" transform="translate(-6417.732 -320.167)" fill="#57c08c"/>
+    </g>
+    <circle id="Picture_Border" data-name="Picture Border" cx="274" cy="274" r="274" transform="translate(2806 826)" fill="#57c08c"/>
+  </g>
+</svg>

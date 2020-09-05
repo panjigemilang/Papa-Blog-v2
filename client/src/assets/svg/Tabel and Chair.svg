@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1225.792" height="565.356" viewBox="0 0 1225.792 565.356">
+  <defs>
+    <filter id="Shadow" x="0" y="525.806" width="1225.792" height="39.55" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#504646" flood-opacity="0.651"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Tabel_and_Chair" data-name="Tabel and Chair" transform="translate(-664.3 -986.437)">
+    <g id="Table" transform="translate(317 -1098)">
+      <g id="Table_foot_left_-_Front" data-name="Table foot left - Front" transform="translate(521.54 2314.771)">
+        <path id="Path_68" data-name="Path 68" d="M4582.389,2314.771s3.026,53.2,0,74.9-57.85,223.617-57.85,223.617h21.081s54.34-208.878,56.658-223.617,2.662-74.9,2.662-74.9h-22.551Z" transform="translate(-4524.54 -2314.771)" fill="#65617d"/>
+      </g>
+      <g id="Table_foot_right_-_Front" data-name="Table foot right - Front" transform="translate(1312.54 2314.771)">
+        <path id="Path_68-2" data-name="Path 68" d="M4547.091,2314.771s-3.026,53.2,0,74.9,57.85,223.617,57.85,223.617H4583.86s-54.34-208.878-56.658-223.617-2.662-74.9-2.662-74.9h22.551Z" transform="translate(-4524.54 -2314.771)" fill="#65617d"/>
+      </g>
+      <g id="Table_foot_left_-_Behind_Dark_" data-name="Table foot left - Behind (Dark)" transform="translate(619.44 2314.771)">
+        <path id="Table_foot_left_-_Behind_Dark_2" data-name="Table foot left - Behind (Dark)" d="M4617.44,2314.771l104.424,296.558h15.2l-105.4-296.558Z" transform="translate(-4617.44 -2314.771)" fill="#49465a"/>
+      </g>
+      <g id="Table_foot_left_-_Behind" data-name="Table foot left - Behind" transform="translate(614.44 2314.771)" style="isolation: isolate">
+        <path id="Table_foot_left_-_Behind-2" data-name="Table foot left - Behind" d="M4617.44,2314.771l104.424,296.558h15.2l-105.4-296.558Z" transform="translate(-4617.44 -2314.771)" fill="#575370"/>
+      </g>
+      <g id="Table_foot_left_-_Behind_Dark_3" data-name="Table foot left - Behind (Dark)" transform="translate(1177.44 2314.771)">
+        <path id="Table_foot_left_-_Behind_Dark_4" data-name="Table foot left - Behind (Dark)" d="M4737.062,2314.771l-104.424,296.558h-15.2l105.4-296.558Z" transform="translate(-4617.44 -2314.771)" fill="#49465a"/>
+      </g>
+      <g id="Table_foot_left_-_Behind-3" data-name="Table foot left - Behind" transform="translate(1184.44 2314.771)">
+        <path id="Table_foot_left_-_Behind-4" data-name="Table foot left - Behind" d="M4737.062,2314.771l-104.424,296.558h-15.2l105.4-296.558Z" transform="translate(-4617.44 -2314.771)" fill="#575370"/>
+      </g>
+      <path id="Table_-_front" data-name="Table - front" d="M5452.1,2290.456v24.315H4468.3v-24.315Z" transform="translate(-4003)" fill="#49465a"/>
+      <path id="Table_-_up" data-name="Table - up" d="M4470.3,2290.456h981.8l-96.937-30.656H4573.041Z" transform="translate(-4003)" fill="#65617d"/>
+    </g>
+    <g id="Plant" transform="translate(317 -1098)">
+      <g id="Plant_right" data-name="Plant right" transform="translate(1197.559 2084.437)">
+        <path id="Path_69" data-name="Path 69" d="M5200.559,2265.971l.07-181.534a69.671,69.671,0,0,1,13.126,33.582c1.953,19.689-11.014,33.362-11.014,33.362v22.183s-.159-12.885,19.139-26.245,28.659-13.366,28.659-13.366,2.2,11.257-18.034,27.977-29.765,13.985-29.765,13.985v29.075s13.435-16.418,31.562-19.231a73.449,73.449,0,0,1,33.006,2.594s-3.941,11.313-30.662,18.75-33.905,0-33.905,0v17.957s14.908-1.522,23.9,0,1.339,38.013-2.509,39.48-5.583,1.432-11.439,1.432Z" transform="translate(-5200.559 -2084.437)" fill="#5dc488"/>
+      </g>
+      <g id="Plant_left" data-name="Plant left" transform="translate(1133.559 2084.437)">
+        <path id="Path_69-2" data-name="Path 69" d="M5267.309,2265.971l-.07-181.534a69.671,69.671,0,0,0-13.126,33.582c-1.953,19.689,11.014,33.362,11.014,33.362v22.183s.159-12.885-19.139-26.245-28.659-13.366-28.659-13.366-2.2,11.257,18.034,27.977,29.765,13.985,29.765,13.985v29.075s-13.435-16.418-31.562-19.231a73.449,73.449,0,0,0-33.006,2.594s3.941,11.313,30.662,18.75,33.905,0,33.905,0v17.957s-14.908-1.522-23.9,0-1.339,38.013,2.509,39.48,5.583,1.432,11.439,1.432Z" transform="translate(-5200.559 -2084.437)" fill="#5dc488"/>
+      </g>
+    </g>
+    <g id="Chair" transform="translate(317 -1098)">
+      <g id="Chair_foot_left_-_Dark" data-name="Chair foot left - Dark" transform="translate(847.41 2520.321)">
+        <path id="Path_67" data-name="Path 67" d="M4858.22,2611.531l24.993-88.087-8.479-3.124-24.323,91.211Z" transform="translate(-4850.41 -2520.321)" fill="#49465a"/>
+      </g>
+      <g id="Chair_foot_right_-_Dark" data-name="Chair foot right - Dark" transform="translate(1043.41 2520.321)">
+        <path id="Path_67-2" data-name="Path 67" d="M4875.4,2611.531l-24.993-88.087,8.479-3.124,24.323,91.211Z" transform="translate(-4850.41 -2520.321)" fill="#49465a"/>
+      </g>
+      <g id="Chair_foot_left_-_Light" data-name="Chair foot left - Light" transform="translate(853.458 2525.777)">
+        <path id="Path_66" data-name="Path 66" d="M4874.044,2522.884l-22.586,85.755,10.571,2.711,21.391-84.505Z" transform="translate(-4851.458 -2522.884)" fill="#65617d"/>
+      </g>
+      <g id="Chair_foot_right_-_Light" data-name="Chair foot right - Light" transform="translate(1038.458 2524.687)">
+        <path id="Path_66-2" data-name="Path 66" d="M4860.833,2522.884l22.586,85.755-10.571,2.711-21.391-84.505Z" transform="translate(-4851.458 -2522.884)" fill="#65617d"/>
+      </g>
+      <path id="Chair-2" data-name="Chair" d="M4793.017,2491.789s44.537-209.67,77.384-230.872,162.816-17.771,192.2,0,68.45,230.872,68.45,230.872-3.723,2.088-12.648,0c-7.141-.589-33.918,44.04-149.508,48.949-117.821-2.454-154.639-51.273-160.892-48.949C4794.675,2496.744,4793.017,2491.789,4793.017,2491.789Z" transform="translate(-4003)" fill="#5dc488"/>
+      <g transform="matrix(1, 0, 0, 1, 347.3, 2084.44)" filter="url(#Shadow)" style="mix-blend-mode: difference;isolation: isolate">
+        <path id="Shadow-2" data-name="Shadow" d="M4392.3,2614.243H5600.093s-323.092,21.55-625.04,21.55S4392.3,2614.243,4392.3,2614.243Z" transform="translate(-4383.3 -2085.44)" fill="#3c3b3b" opacity="0.45"/>
+      </g>
+    </g>
+  </g>
+</svg>

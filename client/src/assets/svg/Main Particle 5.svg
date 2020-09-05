@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="938" height="897" viewBox="0 0 938 897">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.213" y1="0.942" x2="0.665" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#20c65a"/>
+      <stop offset="0.253" stop-color="#14f257"/>
+      <stop offset="1" stop-color="#02c96c"/>
+    </linearGradient>
+    <filter id="Big" x="41" y="0" width="897" height="897" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Main_Particle_5" data-name="Main Particle 5" transform="translate(0 6)" opacity="0.15">
+    <g id="Main_Particle_1" data-name="Main Particle 1">
+      <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Big)">
+        <circle id="Big-2" data-name="Big" cx="439.5" cy="439.5" r="439.5" transform="translate(50 6)" opacity="0.5" fill="url(#linear-gradient)"/>
+      </g>
+      <circle id="Small" cx="65.5" cy="65.5" r="65.5" transform="translate(719 64)" fill="#20c65a" opacity="0.5"/>
+      <circle id="Med" cx="141" cy="141" r="141" transform="translate(0 589)" fill="#0a9d53" opacity="0.8"/>
+    </g>
+    <g id="Particle_1" data-name="Particle 1" transform="translate(557.924 758.329)">
+      <line id="Line_1" data-name="Line 1" x2="201.684" transform="translate(63.451)" fill="none" stroke="#36ad73" stroke-linecap="round" stroke-width="20" opacity="0.8"/>
+      <line id="Line_2" data-name="Line 2" x2="27.193" opacity="0.7" stroke="#5f9c94" stroke-linecap="round" stroke-width="20" fill="none"/>
+      <line id="Line_3" data-name="Line 3" x2="1.133" transform="translate(299.127)" fill="none" stroke="#36ad73" stroke-linecap="round" stroke-width="20" opacity="0.5"/>
+    </g>
+    <g id="Particle_1-2" data-name="Particle 1" transform="translate(293.922 64.899)">
+      <line id="Line_1-2" data-name="Line 1" x2="38.524" transform="translate(36.258)" fill="none" stroke="#36ad73" stroke-linecap="round" stroke-width="20" opacity="0.8"/>
+      <line id="Line_2-2" data-name="Line 2" opacity="0.7" stroke="#5f9c94" stroke-linecap="round" stroke-width="20" fill="none"/>
+    </g>
+    <g id="Particle_1-3" data-name="Particle 1" transform="translate(116.032 106.822)">
+      <line id="Line_1-3" data-name="Line 1" x2="201.684" transform="translate(63.451 0)" fill="none" stroke="#36ad73" stroke-linecap="round" stroke-width="20" opacity="0.8"/>
+      <line id="Line_2-3" data-name="Line 2" x2="27.193" transform="translate(0 0)" fill="none" stroke="#5f9c94" stroke-linecap="round" stroke-width="20" opacity="0.7"/>
+      <line id="Line_3-2" data-name="Line 3" x2="1.133" transform="translate(299.127 0)" fill="none" stroke="#36ad73" stroke-linecap="round" stroke-width="20" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

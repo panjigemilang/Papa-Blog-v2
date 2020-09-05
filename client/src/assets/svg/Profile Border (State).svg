@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="548" height="760.341" viewBox="0 0 548 760.341">
+  <g id="Profile_Border_State_" data-name="Profile Border (State)" transform="translate(-92 624)">
+    <g id="Left_Neck_Parent_" data-name="Left Neck (Parent)" transform="translate(101.583 -309.407)">
+      <path id="Path_72" data-name="Path 72" d="M6947,591.886V818.2c-103.431-18.088-24.871-164.312-184.641-284.67-19.538-35.056-43.041-64.676-68.667-110.2-21.755-66.78,5.074-14.23-10.11-50.877,7.664,22.544,43.489,96.7,93.632,151.983C6828.34,580.8,6894.328,590.312,6947,591.886Z" transform="translate(-6683.583 -372.448)" fill="#57c08c"/>
+    </g>
+    <g id="Right_Neck" data-name="Right Neck" transform="translate(364.583 -309.406)">
+      <path id="Path_72-2" data-name="Path 72" d="M6683.582,591.886V818.2c103.431-18.088,24.871-164.312,184.641-284.67,19.538-35.056,43.041-64.676,68.667-110.2,21.755-66.78-5.074-14.23,10.11-50.877-7.664,22.544-43.489,96.7-93.632,151.983C6802.242,580.8,6736.254,590.312,6683.582,591.886Z" transform="translate(-6683.582 -372.448)" fill="#57c08c"/>
+    </g>
+    <ellipse id="Go_Button" data-name="Go Button" cx="49" cy="51" rx="49" ry="51" transform="translate(316 24)" fill="#5f9c94"/>
+    <text id="GO" transform="translate(334 88)" fill="#fff" stroke="#fff" stroke-width="2" font-size="40" font-family="Jost-Regular, Jost"><tspan x="0" y="0">GO</tspan></text>
+    <circle id="Picture_Border" data-name="Picture Border" cx="274" cy="274" r="274" transform="translate(92 -624)" fill="#57c08c"/>
+  </g>
+</svg>

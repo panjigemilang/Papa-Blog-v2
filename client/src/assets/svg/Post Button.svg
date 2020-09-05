@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230" height="140" viewBox="0 0 230 140">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.436" x2="0.5" y2="1.371" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1f94fa"/>
+      <stop offset="0.536" stop-color="#0b7adc"/>
+      <stop offset="1" stop-color="#1f94fa"/>
+    </linearGradient>
+    <filter id="Container" x="0" y="0" width="230" height="140" filterUnits="userSpaceOnUse">
+      <feOffset dx="9" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-opacity="0.18"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Post_Button" data-name="Post Button" transform="translate(28.5 28.5)">
+    <g transform="matrix(1, 0, 0, 1, -28.5, -28.5)" filter="url(#Container)">
+      <rect id="Container-2" data-name="Container" width="155" height="65" rx="32.5" transform="translate(28.5 28.5)" fill="url(#linear-gradient)"/>
+    </g>
+    <text id="Kirim" transform="translate(23 42)" fill="#fff" font-size="24" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Kirim</tspan></text>
+    <circle id="Icon_Container" data-name="Icon Container" cx="29" cy="29" r="29" transform="translate(93 4)" fill="#fff"/>
+    <g id="Icon_Button" data-name="Icon Button" transform="translate(100.431 7.078)">
+      <g id="Left_Send" data-name="Left Send" transform="translate(27.985) rotate(48)">
+        <path id="Left_Send-2" data-name="Left Send" d="M-.174-3.691C9.353-.913,38.09,6.134,34.05,8.714,29,9.051,2.5,10.144,2.5,10.144c-1.657,0-3.194-.329-3.194-1.986L-2.148-1.57A1.81,1.81,0,0,1-.174-3.691Z" transform="matrix(0.087, -0.996, 0.996, 0.087, 3.865, 34.628)" fill="#50a6f1"/>
+      </g>
+      <g id="Right_Send" data-name="Right Send" transform="translate(37.809 8.795) rotate(48)">
+        <path id="Left_Send-3" data-name="Left Send" d="M1.979,13.835C11.506,11.057,40.243,4.01,36.2,1.43,31.155,1.094,4.656,0,4.656,0,3,0,1.462.329,1.462,1.986L.006,11.714A1.81,1.81,0,0,0,1.979,13.835Z" transform="translate(6.982 38.558) rotate(-101)" fill="#8dc5f6"/>
+      </g>
+    </g>
+  </g>
+</svg>

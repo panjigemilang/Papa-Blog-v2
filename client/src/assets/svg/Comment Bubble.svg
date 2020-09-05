@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.351" height="30.513" viewBox="0 0 31.351 30.513">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.377" x2="0.5" y2="1.312" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0fa744"/>
+      <stop offset="0.49" stop-color="#5ed89d"/>
+      <stop offset="1" stop-color="#0fa744"/>
+    </linearGradient>
+  </defs>
+  <g id="Comment_Bubble" data-name="Comment Bubble" transform="translate(-526.41 -1041.775)">
+    <path id="Path_74" data-name="Path 74" d="M527.417,2355.613a213.932,213.932,0,0,1,0-26.514c.215-1.208.629-1.424,2.608-1.541,7.014-.385,18.574-.254,25.447,0a1.658,1.658,0,0,1,1.541,1.541s.5,13.937,0,19.48c-.322,1.71-1.053,2.046-2.529,2.49-5.674.078-14.082-.479-20.271,0-2.453,2.506-3.334,3.477-5.018,5.413C527.714,2357.316,527.462,2356.2,527.417,2355.613Z" transform="translate(0 -1285)" stroke="#707070" stroke-width="1" opacity="0.9" fill="url(#linear-gradient)"/>
+    <g id="Component_19_1" data-name="Component 19 – 1" transform="translate(533.911 1048.891)">
+      <line id="Line_24" data-name="Line 24" x2="10.632" fill="none" stroke="#b6f3d9" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Component_19_2" data-name="Component 19 – 2" transform="translate(548.795 1048.891)">
+      <line id="Line_24-2" data-name="Line 24" x2="1.063" fill="none" stroke="#b6f3d9" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Component_19_3" data-name="Component 19 – 3" transform="translate(533.911 1054.207)">
+      <line id="Line_24-3" data-name="Line 24" x2="6.379" fill="none" stroke="#b6f3d9" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Component_19_4" data-name="Component 19 – 4" transform="translate(544.543 1054.207)">
+      <line id="Line_24-4" data-name="Line 24" x2="5.316" fill="none" stroke="#b6f3d9" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Component_19_5" data-name="Component 19 – 5" transform="translate(533.911 1059.523)">
+      <line id="Line_24-5" data-name="Line 24" x2="11.695" fill="none" stroke="#b6f3d9" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

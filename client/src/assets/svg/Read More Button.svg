@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="65" viewBox="0 0 380 65">
+  <g id="Read_More_Button" data-name="Read More Button" transform="translate(-235 -666)">
+    <rect id="Container" width="380" height="65" rx="32.5" transform="translate(235 666)" fill="#fff"/>
+    <path id="Container_Right" data-name="Container Right" d="M0,0H192.5a32.5,32.5,0,0,1,0,65H0L19.6,34.509Z" transform="translate(390 666)" fill="#6ac79a"/>
+  </g>
+</svg>
