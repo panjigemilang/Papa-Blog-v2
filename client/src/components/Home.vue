@@ -32,7 +32,9 @@
       <div class="container">
         <Timeline />
         <Contents :limitProps="limit" />
-        <router-link to="/articles">Lihat Seluruh Postingan</router-link>
+        <div class="btn-box">
+          <router-link to="/articles">Lihat Seluruh Postingan</router-link>
+        </div>
       </div>
     </section>
   </div>
@@ -86,6 +88,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/dist/template";
+
 .app {
   color: var(--color-ternary);
   position: relative;
@@ -110,6 +114,19 @@ section#one {
 
 section#three {
   @include app;
+
+  .btn-box {
+    a {
+      background-color: var(--color-quartery);
+      border-radius: 25px;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+        0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      color: var(--bg-primary);
+      display: inline-block;
+      padding: 15px;
+      text-decoration: none;
+    }
+  }
 }
 
 /* Large screens */
