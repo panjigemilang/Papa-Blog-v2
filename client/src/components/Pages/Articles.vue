@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <h1>Articles</h1>
-    <Contents layoutProps="left" :limitProps="limit" :offsetProps="offset" />
-    <div class="btn-box">
-      <button @click.prevent="prevPage">Prev</button>
-      <button @click.prevent="nextPage">Next</button>
+  <div class="articles-app">
+    <CircleProfile />
+    <div class="container">
+      <Search />
+      <Contents layoutProps="left" :limitProps="limit" :offsetProps="offset" />
+      <div class="btn-box">
+        <button @click.prevent="prevPage">Prev</button>
+        <button @click.prevent="nextPage">Next</button>
+      </div>
     </div>
   </div>
 </template>
@@ -12,6 +15,8 @@
 <script>
 import { mapGetters } from "vuex";
 import Contents from "./SubPages/Contents";
+import CircleProfile from "./SubPages/CircleProfile";
+import Search from "./SubPages/Search";
 
 export default {
   name: "Articles",
@@ -23,6 +28,8 @@ export default {
   },
   components: {
     Contents,
+    CircleProfile,
+    Search,
   },
   methods: {
     ...mapGetters(["getState"]),
@@ -36,4 +43,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.articles-app {
+  .container {
+    background-color: white;
+  }
+}
+</style>

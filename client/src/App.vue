@@ -79,6 +79,14 @@ export default {
   --footer-left: #bfefdb;
   --error: #f20000;
   --transition-speed: 600ms;
+  --spacing-sm: 1em;
+  --spacing-md: 1.67em;
+  --spacing-lg: 2.2em;
+  --spacing-xl: 3em;
+  --font-sm: 1.2em;
+  --font-md: 1.67em;
+  --font-lg: 2.2em;
+  --font-xl: 3em;
 }
 
 html,
@@ -90,8 +98,8 @@ body {
 
 body {
   background-color: var(--bg-primary);
-  color: var(--text-secondary);
-  font-size: 16px !important;
+  color: var(--text-primary);
+  font-size: 92.5% !important;
   font-family: "Product Sans";
   margin: 0;
   padding: 0;

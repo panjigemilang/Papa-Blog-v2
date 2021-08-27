@@ -32,10 +32,17 @@
               />
             </div>
             <div class="footer">
+              <div class="output">
+                {{ content }}
+              </div>
               <br />
               <slot name="footer">
-                <button class="submit-button" @click.prevent="onSubmit">Submit</button>
-                <button class="close-button" @click="$emit('close')">Cancel</button>
+                <button class="submit-button" @click.prevent="onSubmit">
+                  Submit
+                </button>
+                <button class="close-button" @click="$emit('close')">
+                  Cancel
+                </button>
               </slot>
             </div>
           </div>
@@ -55,7 +62,7 @@ export default {
   name: "Modal",
   components: {
     VueEditor,
-    VueTagsInput
+    VueTagsInput,
   },
   data() {
     return {
@@ -73,11 +80,11 @@ export default {
           { align: "" },
           { align: "center" },
           { align: "right" },
-          { align: "justify" }
+          { align: "justify" },
         ],
         [({ list: "ordered" }, { list: "bullet" })],
-        ["image", "code-block"]
-      ]
+        ["image", "code-block"],
+      ],
     };
   },
   methods: {
@@ -105,7 +112,7 @@ export default {
         title: this.title,
         images: this.content.match(/data:image\/[^;]+;base64,.*?(?=")/g),
         content: this.content.replace(/<img\ssrc=.*?>/gi, "<ImageReplace>"),
-        tags
+        tags,
       };
 
       console.log("Data", data);
@@ -115,8 +122,8 @@ export default {
           this.errors = this.$store.getters.getState.errors;
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
